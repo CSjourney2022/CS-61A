@@ -20,17 +20,6 @@ def a_plus_abs_b(a, b):
     return f(a, b)
 
 
-def a_plus_abs_b_syntax_check():
-    """Check that you didn't change the return statement of a_plus_abs_b.
-
-    >>> # You aren't expected to understand the code of this test.
-    >>> import inspect, re
-    >>> re.findall(r'^\s*(return .*)', inspect.getsource(a_plus_abs_b), re.M)
-    ['return f(a, b)']
-    """
-    # You don't need to edit this function. It's just here to check your work.
-
-
 def two_of_three(i, j, k):
     """Return m*m + n*n, where m and n are the two smallest members of the
     positive numbers i, j, and k.
@@ -44,23 +33,7 @@ def two_of_three(i, j, k):
     >>> two_of_three(5, 5, 5)
     50
     """
-    return min(i * i + j * j, i * i + k * k, j * j + k * k)
-    # Alternate solution
-
-
-def two_of_three_alternate(i, j, k):
     return i**2 + j**2 + k**2 - max(i, j, k)**2
-
-
-def two_of_three_syntax_check():
-    """Check that your two_of_three code consists of nothing but a return statement.
-
-    >>> # You aren't expected to understand the code of this test.
-    >>> import inspect, ast
-    >>> [type(x).__name__ for x in ast.parse(inspect.getsource(two_of_three)).body[0].body]
-    ['Expr', 'Return']
-    """
-    # You don't need to edit this function. It's just here to check your work.
 
 
 def largest_factor(n):

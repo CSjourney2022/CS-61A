@@ -14,10 +14,21 @@ def a_plus_abs_b(a, b):
     3
     """
     if b < 0:
-        f = sub
+        f = _____
     else:
-        f = add
+        f = _____
     return f(a, b)
+
+
+def a_plus_abs_b_syntax_check():
+    """Check that you didn't change the return statement of a_plus_abs_b.
+
+    >>> # You aren't expected to understand the code of this test.
+    >>> import inspect, re
+    >>> re.findall(r'^\s*(return .*)', inspect.getsource(a_plus_abs_b), re.M)
+    ['return f(a, b)']
+    """
+    # You don't need to edit this function. It's just here to check your work.
 
 
 def two_of_three(i, j, k):
@@ -33,7 +44,18 @@ def two_of_three(i, j, k):
     >>> two_of_three(5, 5, 5)
     50
     """
-    return i**2 + j**2 + k**2 - max(i, j, k)**2
+    return _____
+
+
+def two_of_three_syntax_check():
+    """Check that your two_of_three code consists of nothing but a return statement.
+
+    >>> # You aren't expected to understand the code of this test.
+    >>> import inspect, ast
+    >>> [type(x).__name__ for x in ast.parse(inspect.getsource(two_of_three)).body[0].body]
+    ['Expr', 'Return']
+    """
+    # You don't need to edit this function. It's just here to check your work.
 
 
 def largest_factor(n):
@@ -46,11 +68,7 @@ def largest_factor(n):
     >>> largest_factor(13) # factor is 1 since 13 is prime
     1
     """
-    factor = n - 1
-    while factor > 0:
-        if n % factor == 0:
-            return factor
-        factor -= 1
+    "*** YOUR CODE HERE ***"
 
 
 def hailstone(n):
@@ -72,13 +90,4 @@ def hailstone(n):
     >>> b
     1
     """
-    length = 1
-    while n != 1:
-        print(n)
-        if n % 2 == 0:
-            n = n // 2      # Integer division prevents "1.0" output
-        else:
-            n = 3 * n + 1
-        length = length + 1
-    print(n)                # n is now 1
-    return length
+    "*** YOUR CODE HERE ***"
